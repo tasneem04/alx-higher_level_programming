@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def replace_in_list(my_list, idx, element):
+def new_in_list(my_list, idx, element):
     cp_list = []
     for i in range(0, len(my_list)):
         cp_list.append(my_list[i])
