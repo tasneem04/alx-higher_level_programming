@@ -2,7 +2,7 @@
 def new_in_list(my_list, idx, element):
     cp_list = []
     for i in range(0, len(my_list)):
-        cp_list.append(my_list[i]) 
+        cp_list.append(my_list[i])
     for i in range(0, len(cp_list)):
         if idx < 0:
             return cp_list
