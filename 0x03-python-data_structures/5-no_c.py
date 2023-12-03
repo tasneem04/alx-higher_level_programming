@@ -6,4 +6,5 @@ def no_c(my_string):
     for i in range(0, len(my_string)):
         if cp_list[i] == 'c' or cp_list[i] == 'C':
             del cp_list[i]
-            return cp_list
+            cp_list = "".join(map(str, cp_list))
+            return str(cp_list)
