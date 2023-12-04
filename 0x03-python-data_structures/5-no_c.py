@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    if not my_string:
+        return None
     cp_list = []
     for i in range(0, len(my_string)):
         cp_list.append(my_string[i])
