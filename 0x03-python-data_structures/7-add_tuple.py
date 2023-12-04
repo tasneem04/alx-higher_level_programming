@@ -6,7 +6,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
     for idx in range(0, (len(list_a)-1)):
         if list_a[idx] == "":
             list_a[idx] = 0
-            print("the list idx {} is  {}".fomrat(idx,list_a[idx]))
+            print("the list idx {} is {}".fomrat(idx, list_a[idx]))
             tuple_a = tuple(list_a)
         else:
             continue
