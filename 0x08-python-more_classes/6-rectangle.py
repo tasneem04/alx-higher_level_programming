@@ -10,6 +10,7 @@ class Rectangle:
         """ Instantiation of rectangle with width and height """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -41,7 +42,7 @@ class Rectangle:
 
     def area(self):
         """ returns area of Rectangle """
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """ returns perimeter of Rectangle """
@@ -56,11 +57,11 @@ class Rectangle:
         s = ''
         if self.__width != 0 and self.__height != 0:
             for h in range(self.__height):
-                s += str('#' * self.__width) + '\n'
+                s += str('#' * self.width) + '\n'
         return s[:-1]
 
     def __repr__(self):
-        """returns string representation of rectanlge"""
+        """returns string representation of Rectangle"""
         return 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
 
     def __del__(self):
