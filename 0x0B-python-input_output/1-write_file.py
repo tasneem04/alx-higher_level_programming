@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module containing the function write_file"""
+
+
 def number_of_lines(filename=""):
     """returns number of lines in a file"""
     lines = 0
