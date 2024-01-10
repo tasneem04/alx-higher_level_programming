@@ -1,29 +1,36 @@
 #!/usr/bin/python3
-"""module evaluate geometry using maths operations"""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""Defines a class Square based on 9-rectangle.py.
+
+Attributes:
+    width (int): width of the rectangle.
+    height (int): height of the rectangle.
+"""
 
 
-class Rectangle(BaseGeometry):
-    """Rectangle class inheriting from BaseGeometry class"""
-    def __init__(self, width, height):
-        """initializes new object of Rectangle Class"""
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__height = height
-        self.__width = width
-
-    def area(self):
-        return self.__height * self.__width
-
-    def __str__(self):
-        return "[{}] {:d}/{:d}".format("Rectangle", self.__width,
-                                       self.__height)
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Square class inheriting from Rectangle class"""
+    """Defines a class Square.
+
+    Args:
+        Rectangle (Rectangle): rectangle
+    """
+
     def __init__(self, size):
-        """initializes new object of Rectangle Class"""
+        """Creates new instances of class Square.
+
+        Args:
+            size (int): size of 1 side of square.
+        """
         self.integer_validator("size", size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
+        super().__init__(size, size)
+
+    def area(self):
+        """Calculates the area of a square.
+
+        Returns:
+            int: the area of the square.
+        """
+        return self.__size ** 2
